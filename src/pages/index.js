@@ -2,7 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { Poppins } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
-import Header from "@/components/Header/Header";
+import Header from "@/components/Banner/Header";
+import Footer from "@/components/Banner/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -133,6 +134,7 @@ export default function Home() {
           </a>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

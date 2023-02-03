@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Desktop from "@/components/Menubar/Desktop";
+import SignInWithGoogle from "@/components/Menubar/SignInWithGoogle";
 
 export default function TopNavbar() {
   return (
@@ -13,6 +14,9 @@ export default function TopNavbar() {
       </div>
       <div className="hidden md:inline-block ml-10 w-auto flex-1">
         <Desktop />
+      </div>
+      <div className="hidden lg:inline-block ml-auto w-auto">
+        <SignInWithGoogle />
       </div>
     </nav>
   );

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Desktop from "@/components/Menubar/Desktop";
-import SignInWithGoogle from "@/components/Menubar/SignInWithGoogle";
+import SignInWithGoogle from "@/components/Button/SignInWithGoogle";
 
 export default function TopNavbar() {
   return (

@@ -12,7 +12,7 @@ export default function Desktop() {
           <Link
             href={item.path}
             className={`relative p-2 pb-3 flex flex-row items-center justify-center w-auto ${
-              router.asPath === item.path
+              router.asPath.split("/")[1] === item.path_name
                 ? "text-white"
                 : "text-[#696969] hover:text-[#c9d1d9] focus-within:text-[#c9d1d9]"
             }`}
@@ -32,7 +32,7 @@ export default function Desktop() {
             <span className="ml-1 text-base text-center text-current font-medium tracking-wide">
               {item.title}
             </span>
-            {router.asPath === item.path && (
+            {router.asPath.split("/")[1] === item.path_name && (
               <span className="absolute bottom-0 left-0 right-0 w-full h-0.5 bg-white"></span>
             )}
           </Link>

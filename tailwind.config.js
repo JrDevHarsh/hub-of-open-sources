@@ -19,6 +19,9 @@ module.exports = {
           1: "#c9d1d9",
         },
       },
+      backgroundImage: {
+        dim: "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))",
+      },
     },
   },
   plugins: [],

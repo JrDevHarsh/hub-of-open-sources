@@ -26,7 +26,7 @@ export default function UserAccountCard() {
             Your Profile
           </p>
           <p className="text-sm text-justify text-[#696969] font-medium tracking-wide">
-            Edit name, tags and bio
+            View e-mail, edit name and bio
           </p>
         </div>
       </div>

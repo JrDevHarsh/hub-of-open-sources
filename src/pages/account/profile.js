@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Poppins } from "@next/font/google";
 import Header from "@/components/Banner/Header";
 import Footer from "@/components/Banner/Footer";
-import UserAccountContainer from "@/components/Container/UserAccountContainer";
+import UserProfileEditContainer from "@/components/Container/UserProfileEditContainer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -10,7 +10,7 @@ const poppins = Poppins({
   style: "normal",
 });
 
-export default function Account() {
+export default function Profile() {
   return (
     <>
       <Head>
@@ -30,7 +30,11 @@ export default function Account() {
       </Head>
       <Header />
       <main className={poppins.className}>
-        <h2>Profile Update</h2>
+        <section className="realtive px-4 flex flex-row items-center justify-center w-full">
+          <div className="py-10 max-w-3xl w-full">
+            <UserProfileEditContainer />
+          </div>
+        </section>
       </main>
       <Footer />
     </>

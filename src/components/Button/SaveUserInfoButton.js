@@ -1,28 +1,33 @@
 import { db } from "@/config/firebase";
+import { updateCurrentUser } from "@/store/slices/userSlice";
 import { doc, updateDoc } from "firebase/firestore";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function SaveUserInfoButton({
   defaultValue,
   updateProp,
-  updateValue,
   value,
   setEditing,
 }) {
+  const userId = useSelector((state) => state.user.currentUser.userId);
+  const dispatch = useDispatch();
+
   async function handleSaveUserInfo() {
     setEditing(false);
     if (defaultValue === value) return;
     try {
       const date = Date.now().toString();
-      const updateUserRef = doc(db, "users", "IcXmoREutjQFPP0m0j47");
+      const updateUserRef = doc(db, "users", userId);
       await updateDoc(updateUserRef, {
         [updateProp]: value,
         updatedAt: date,
       });
-      updateValue((prev) => ({
-        ...prev,
-        [updateProp]: value,
-        updatedAt: date,
-      }));
+      dispatch(
+        updateCurrentUser({
+          [updateProp]: value,
+          updatedAt: date,
+        })
+      );
     } catch (err) {
       console.log(err);
     }

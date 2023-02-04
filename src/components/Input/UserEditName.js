@@ -3,11 +3,7 @@ import CancelUserInfoButton from "../Button/CancelUserInfoButton";
 import SaveUserInfoButton from "../Button/SaveUserInfoButton";
 import UpdateUserInfoButton from "../Button/UpdateUserInfoButton";
 
-export default function UserEditName({
-  defaultValue,
-  updateProp,
-  updateValue,
-}) {
+export default function UserEditName({ defaultValue, updateProp }) {
   const [name, setName] = useState(defaultValue || "");
   const [isEditing, setEditing] = useState(false);
 
@@ -45,7 +41,6 @@ export default function UserEditName({
           <>
             <SaveUserInfoButton
               updateProp={updateProp}
-              updateValue={updateValue}
               defaultValue={defaultValue}
               value={name}
               setEditing={setEditing}

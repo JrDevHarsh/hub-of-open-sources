@@ -1,8 +1,12 @@
 import Link from "next/link";
 import Desktop from "@/components/Menubar/Desktop";
 import SignInWithGoogle from "@/components/Button/SignInWithGoogle";
+import SignOut from "../Button/SignOut";
+import { useSelector } from "react-redux";
 
 export default function TopNavbar() {
+  const isUserLoggedIn = useSelector((state) => state.user.isUserLoggedIn);
+
   return (
     <nav className="relative px-4 pt-3 pb-3 md:pb-0 flex flex-row items-start justify-start w-full">
       <div className="flex-1 max-w-[255px] w-full">
@@ -16,7 +20,7 @@ export default function TopNavbar() {
         <Desktop />
       </div>
       <div className="hidden lg:inline-block ml-auto w-auto">
-        <SignInWithGoogle />
+        {isUserLoggedIn ? <SignOut /> : <SignInWithGoogle />}
       </div>
     </nav>
   );

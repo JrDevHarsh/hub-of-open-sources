@@ -3,6 +3,8 @@ import { Poppins } from "@next/font/google";
 import Header from "@/components/Banner/Header";
 import Footer from "@/components/Banner/Footer";
 import UserProfileEditContainer from "@/components/Container/UserProfileEditContainer";
+import { useSelector } from "react-redux";
+import SignInWithGoogle from "@/components/Button/SignInWithGoogle";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -11,6 +13,7 @@ const poppins = Poppins({
 });
 
 export default function Profile() {
+  const isUserLoggedIn = useSelector((state) => state.user.isUserLoggedIn);
   return (
     <>
       <Head>
@@ -32,7 +35,18 @@ export default function Profile() {
       <main className={poppins.className}>
         <section className="realtive px-4 flex flex-row items-center justify-center w-full">
           <div className="py-10 max-w-3xl w-full">
-            <UserProfileEditContainer />
+            {isUserLoggedIn ? (
+              <UserProfileEditContainer />
+            ) : (
+              <div className="flex flex-col items-center justify-center w-full">
+                <div className="mt-2 mb-8 flex flex-row items-center justify-center w-full">
+                  <p className="text-base text-center text-c-white-2 font-medium tracking-wide">
+                    Need to sign-in first in order to preview the content.
+                  </p>
+                </div>
+                <SignInWithGoogle />
+              </div>
+            )}
           </div>
         </section>
       </main>

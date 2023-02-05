@@ -4,6 +4,13 @@
 
 > **Note**: Please refer to this [note](#pr-note) before making any contributions.
 
+## Deployment
+
+The final demo of this project can be seen on the following links:
+
+- [Production](https://hub-of-open-sources.vercel.app/)
+- [Development](https://beta-hub-of-open-sources.vercel.app/)
+
 ## Run Locally
 
 1. Click on the [Fork](https://github.com/JunDevHarsh/hub-of-open-sources/fork) button at the top right corner of the repository page to create a copy of the project on your GitHub account.
@@ -36,11 +43,16 @@
 
 ## Tech Stack
 
-**Client:** [Next.js](https://nextjs.org/)
+- **Client:** [Next.js](https://nextjs.org/), [TailwindCss](https://tailwindcss.com/), [Redux](https://redux.js.org/), [Redux-toolkit](https://redux-toolkit.js.org/)
+- **Database:** [Firebase](https://firebase.google.com/)
 
 ## Author
 
 - [JunDevHarsh](https://www.github.com/JunDevHarsh)
+
+## License
+
+`Hub Of Open-Sources` is licensed under the [MIT](/LICENSE) License - see the LICENSE file for details.
 
 ## Contributing
 

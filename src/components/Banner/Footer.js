@@ -23,7 +23,7 @@ export default function Footer() {
               Open-source project released under the{" "}
             </span>
             <a
-              href="https://github.com/JunDevHarsh/github-project-hub/blob/dev/LICENSE"
+              href="https://github.com/JunDevHarsh/hub-of-open-sources/blob/dev/LICENSE"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Project's LICENSE"
